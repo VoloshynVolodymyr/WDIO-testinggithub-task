@@ -7,12 +7,7 @@ class HomePage extends BasePage {
   get signInButton() {
     return $('.HeaderMenu-link--sign-in');
   }
-  // get pricingLink() {
-  //   return $('a[href="/pricing"]');
-  // }
-  // get searchInput() {
-  //   return $('[data-test-selector="nav-search-input"]');
-  // }
+
   get jumpToButton() {
     return $('button[data-target="qbsearch-input.inputButton"]');
   }
@@ -136,10 +131,6 @@ class HomePage extends BasePage {
   async isSearchButtonVisible() {
     return await this.isElementDisplayed(this.searchButton);
   }
-
-  // async clickPricing() {
-  //   await this.waitForElementAndClick(this.pricingLink);
-  // }
 }
 
 export default new HomePage();

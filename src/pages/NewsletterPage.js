@@ -2,7 +2,7 @@ import BasePage from './BasePage.js';
 
 class NewsletterPage extends BasePage {
   get header() {
-    return $('h1.Primer_Brand__Heading-module__Heading--3___wsITu');
+    return $('div[data-testid="Grid-_R_19b_"] h1');
   }
 
   get emailInput() {

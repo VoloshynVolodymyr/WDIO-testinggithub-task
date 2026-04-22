@@ -2,7 +2,7 @@ import BasePage from './BasePage.js';
 
 class EnterpriseTrialPage extends BasePage {
   get getStartedHeader() {
-    return $('h2.Primer_Brand__Heading-module__Heading--5___HgypG');
+    return $('div[data-target="react-partial.reactRoot"] h2');
   }
 
   async getGetStartedHeaderText() {

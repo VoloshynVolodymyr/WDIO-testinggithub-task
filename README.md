@@ -1,72 +1,81 @@
 # TestSquad-HomeTask
 
-Автоматизоване тестування GitHub з використанням WebDriverIO + JavaScript та патерну Page Object Model (POM).
+Automated GitHub testing using WebDriverIO + JavaScript and Page Object Model (POM) pattern.
 
-## Опис проекту
+## Project Description
 
-Проект містить 5 автоматизованих тест-кейсів для перевірки основних функцій GitHub:
+The project contains 5 automated test cases to verify core GitHub functionality:
 
-| #   | Тест-кейс                             | Опис                                                |
-| --- | ------------------------------------- | --------------------------------------------------- |
-| 1   | Sign-up Process Initiation            | Перевірка форми реєстрації та кнопки Create account |
-| 2   | Navigating to Enterprise Cloud Trials | Навігація до Enterprise розділу через футер         |
-| 3   | Subscribing to GitHub Resources       | Підписка на GitHub розсилку                         |
-| 4   | Repository Search Functionality       | Пошук репозиторіїв                                  |
-| 5   | Pricing and Feature Comparison        | Перевірка сторінки Pricing та порівняння функцій    |
+| #   | Test Case  | Description                                         |
+| --- | ---------- | --------------------------------------------------- |
+| 1   | signup     | Sign-up form verification and Create account button |
+| 2   | enterprise | Navigation to Enterprise section via footer         |
+| 3   | subscribe  | Subscription to GitHub newsletter                   |
+| 4   | search     | Repository search functionality                     |
+| 5   | pricing    | Pricing page and feature comparison                 |
 
-## Технології
+## Technologies
 
-| Технологія  | Версія | Призначення                 |
-| ----------- | ------ | --------------------------- |
-| WebDriverIO | 9.20.0 | Фреймворк для автоматизації |
-| JavaScript  | ES6+   | Мова програмування          |
-| Mocha       | 9.20.0 | Тестовий фреймворк          |
-| Faker.js    | latest | Генерація тестових даних    |
-| Allure      | 2.34.1 | Формування звітів           |
-| ESLint      | 9.39.1 | Перевірка коду              |
-| Prettier    | 3.6.2  | Форматування коду           |
+| Technology  | Version | Purpose              |
+| ----------- | ------- | -------------------- |
+| WebDriverIO | 9.20.0  | Automation framework |
+| JavaScript  | ES6+    | Programming language |
+| Mocha       | 9.20.0  | Test framework       |
+| Faker.js    | latest  | Test data generation |
+| Allure      | 2.34.1  | Report generation    |
+| ESLint      | 9.39.1  | Code linting         |
+| Prettier    | 3.6.2   | Code formatting      |
 
-## Встановлення
+## Installation
 
 ```bash
-# Клонування репозиторію
-git clone <repository-url>
+# Clone repository
+git clone https://github.com/VoloshynVolodymyr/WDIO-testinggithub-task.git
 cd TestSquad-HomeTask
 
-# Встановлення залежностей
+# Install dependencies
 npm install
 
-# Тест 1: Реєстрація
+# Test 1: signup
 npx wdio run src/config/wdio.conf.js --spec src/tests/signup.spec.js
 
-# Тест 2: Enterprise
+# Test 2: enterprise
 npx wdio run src/config/wdio.conf.js --spec src/tests/enterprise.spec.js
 
-# Тест 3: Підписка
+# Test 3: subscribe
 npx wdio run src/config/wdio.conf.js --spec src/tests/subscribe.spec.js
 
-# Тест 4: Пошук
+# Test 4: search
 npx wdio run src/config/wdio.conf.js --spec src/tests/search.spec.js
 
-# Тест 5: Ціни
+# Test 5: pricing
 npx wdio run src/config/wdio.conf.js --spec src/tests/pricing.spec.js
 
-# Запуск з Allure звітом
+# Run all tests
+npm run wdio
+
+# Run with Allure report
 npm run wdio-allure
 
-# Перевірка якості коду
-# Перевірка коду ESLint
+# Code quality
+
+# ESLint check
 npm run lint
 
-# Автоматичне виправлення помилок
+# Auto-fix ESLint errors
 npm run lint:fix
 
-# Перевірка форматування
+# Prettier check
 npm run prettier
 
-# Автоматичне форматування
+# Auto-format with Prettier
 npm run prettier:fix
 
-# Повне форматування та перевірка
+# Full formatting and linting
 npm run format
+
+```
+
+```
+
 ```

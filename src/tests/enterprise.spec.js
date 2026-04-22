@@ -9,6 +9,7 @@ describe('Test Case 2: Navigating to Enterprise', () => {
   });
 
   it('should navigate to Enterprise and verify content', async () => {
+    const expectedText = 'Get started with GitHub Enterprise';
     await HomePage.scrollToFooter();
     await HomePage.clickEnterpriseFooterLink();
     console.log('Clicked on Enterprise link in footer');
@@ -23,7 +24,7 @@ describe('Test Case 2: Navigating to Enterprise', () => {
     console.log('Clicked on StartForTrial button');
 
     const getStartedHeaderText = await EnterpriseTrialPage.getGetStartedHeaderText();
-    expect(getStartedHeaderText).toContain('Get started with GitHub Enterprise');
+    expect(getStartedHeaderText).toContain(expectedText);
     console.log(`Trial page header verified: "${getStartedHeaderText}"`);
 
     console.log('Enterprise navigation test completed successfully');

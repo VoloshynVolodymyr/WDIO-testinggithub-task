@@ -146,19 +146,3 @@ This document contains 5 test cases for automating GitHub website functionality 
 **Browsers:**
 
 - Chrome (latest version)
-
-**Setup Instructions:**
-
-```bash
-# Install dependencies
-npm install
-
-# Run all tests
-npm run wdio
-
-# Run specific test
-npx wdio run src/config/wdio.conf.js --spec src/tests/{test-name}.spec.js
-
-# Run tests with Allure report
-npm run wdio-allure
-```

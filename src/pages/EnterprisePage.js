@@ -9,10 +9,6 @@ class EnterprisePage extends BasePage {
     return $('section > a[href*="get_started?with=enterprise"]');
   }
 
-  get getStartedHeader() {
-    return $('h2.Primer_Brand__Heading-module__Heading--5___HgypG');
-  }
-
   async getMainHeaderText() {
     await this.waitForElement(this.mainHeader);
     return await this.getText(this.mainHeader);
@@ -20,11 +16,6 @@ class EnterprisePage extends BasePage {
 
   async clickStartForTrialButton() {
     await this.waitForElementAndClick(this.StartForTrialButton);
-  }
-
-  async getGetStartedHeaderText() {
-    await this.waitForElement(this.getStartedHeader);
-    return await this.getText(this.getStartedHeader);
   }
 
   async waitForEnterprisePage() {
